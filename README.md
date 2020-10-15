@@ -48,7 +48,12 @@ python3 e_mail_sender.py <QTD> <REMETENTE>
 
   
 
-- Além disso o google não permite que você encha a caixa de e-mail de uma pessoa de uma unica vez. Então quando muitos e-mail são enviados em um curto periodo de tempo ele encerra a conexão. Além disso google também possui um limite diário de e-mails que podem ser enviados, fique alerta.
+- Além disso o google não permite que você encha a caixa de e-mail de uma pessoa de uma unica vez. Então quando muitos e-mail são enviados em um curto periodo de tempo ele encerra a conexão.  Por isso aguardamos 2 segundos a cada envio.
 
   _**Log do erro**_: `smtplib.SMTPSenderRefused: (421, b'4.7.0 Try again later, closing connection. (MAIL) [...]', '<USER>')`
+  
+  
 
+- Além disso google também possui um limite diário de e-mails que podem ser enviados, leia a documentação para um numero exato.
+
+  _**Log do erro**_:`smtplib.SMTPDataError: (550, b'5.4.5 Daily user sending quota exceeded. [...]')`
